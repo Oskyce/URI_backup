@@ -111,14 +111,6 @@ html_theme_options = {
 	
 html_show_sourcelink = False
 
-html_context = {
-    'css_files': [
-    '_static/css/theme.css',
-    ],
-#        'reference_project': 'Linee guida per utilizzo risorse informatiche',
-#       'reference_project_url': 'https://                /',
-    }
-
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 html_title = "Linee guida per utilizzo risorse informatiche"
