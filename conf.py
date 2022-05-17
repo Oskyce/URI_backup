@@ -39,10 +39,18 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+   'sphinx.ext.duration',
+    'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.autosummary',
+    'sphinx.ext.intersphinx',
 ]
+
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3/', None),
+    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+}
+intersphinx_disabled_domains = ['std']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -94,8 +102,6 @@ todo_include_todos = False
 
 html_theme = 'sphinx_rtd_theme'
 
-html_theme_path = ["_themes", ]
-
 html_logo = '_image/imginiz.jpg'
 
 html_theme_options = {
@@ -124,18 +130,6 @@ html_short_title = "Linee guida URI"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-# Custom sidebar templates, must be a dictionary that maps document names
-# to template names.
-
-
-html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
-}
-
 
 # -- Options for HTMLHelp output ------------------------------------------
 
